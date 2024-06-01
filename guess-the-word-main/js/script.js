@@ -7,3 +7,14 @@ const guessCount = document.querySelector(".guess-count");
 const message = document.querySelector(".message");
 const playAgain = document.querySelector(".play-again");
 const word = "Simon";
+
+//Add Placeholders for Each Letter
+const placeholder = function (word) {
+    const placeholderLetters = [];
+    for (const letter of word) {
+        placeholderLetters.push("●");
+    }
+    wordProgress.innerText = placeholderLetters.join("");
+  };
+  
+  placeholder(word);
