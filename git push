@@ -1,0 +1,23 @@
+[33mcommit 6d309c4b7b97da63bfd83723f5f782fd04892c3c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: simonhtz <shiamson@hotmail.com>
+Date:   Sun Jun 2 13:30:26 2024 +0200
+
+    Add event listener for button
+
+[33mcommit 08703e71796762141483ec2e6e1c88e8d0b093cc[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: simonhtz <shiamson@hotmail.com>
+Date:   Sat Jun 1 16:37:54 2024 +0200
+
+    Add placeholder for each letter
+
+[33mcommit 002859d8280c45cc04a76777cfd2f005ecce7c90[m
+Author: simonhtz <shiamson@hotmail.com>
+Date:   Sat Jun 1 15:35:35 2024 +0200
+
+    Change starting word to Simon, all global variables ready
+
+[33mcommit 85fad43a4d56aac0a6922ad64de37e9ab659d258[m
+Author: simonhtz <shiamson@hotmail.com>
+Date:   Sat Jun 1 15:32:05 2024 +0200
+
+    Initial Commit

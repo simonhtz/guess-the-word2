@@ -26,3 +26,17 @@ const placeholder = function (word) {
     console.log(inputValue);
     letter.value = "";
   });
+
+  //Check Player's Input
+  function (input) {
+    const acceptedLetter = /[a-zA-Z]/;
+    if (input.length === 0) {
+        message.innerText = "Please enter a letter.";
+     } else if (input.length > 1) {
+            message.innerText = "Please enter only one letter.";
+        } else if (!input.match(acceptedLetter)) {
+            message.innerText = "Please enter a letter from A to Z.";
+        } else {
+            return input;
+        }
+    };
