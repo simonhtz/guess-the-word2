@@ -7,6 +7,7 @@ const guessCount = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
 const playAgain = document.querySelector(".play-again");
 const word = "Simon";
+const guessedLetters = [];
 
 //Add Placeholders for Each Letter
 const placeholder = function (word) {
@@ -22,13 +23,14 @@ const placeholder = function (word) {
   //Add Event Listener for the Button
   guessButton.addEventListener("click", function(e) {
     e.preventDefault();
-    const inputValue = e.target.value;
-    console.log(inputValue);
-    letter.value = "";
+    message.innerText = "";
+    const inputValue = letter.value;
+    const goodGuess = checkInput(inputValue);
+    console.log(goodGuess);
   });
 
   //Check Player's Input
-  function (input) {
+  const checkInput = function (input) {
     const acceptedLetter = /[a-zA-Z]/;
     if (input.length === 0) {
         message.innerText = "Please enter a letter.";
