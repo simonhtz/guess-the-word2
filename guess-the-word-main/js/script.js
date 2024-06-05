@@ -1,4 +1,4 @@
-const guessedLetters = document.querySelector(".guessed-letters");
+const guessedLetterElement = document.querySelector(".guessed-letters");
 const guessButton = document.querySelector(".guess");
 const letter = document.querySelector(".letter");
 const wordProgress = document.querySelector(".word-in-progress");
@@ -24,9 +24,12 @@ const placeholder = function (word) {
   guessButton.addEventListener("click", function(e) {
     e.preventDefault();
     message.innerText = "";
-    const inputValue = letter.value;
-    const goodGuess = checkInput(inputValue);
-    console.log(goodGuess);
+    const guess = letter.value;
+    const goodGuess = checkInput(guess);
+    if (goodGuess) {
+        makeGuess(guess);
+    }
+    letter.value = "";
   });
 
   //Check Player's Input
@@ -42,3 +45,15 @@ const placeholder = function (word) {
             return input;
         }
     };
+
+    //Capture Input
+const makeGuess = function (guess) {
+    guess = guess.toUppeCcase();
+    if (guessedLetters.includes(guess)) {
+        message.innerText = "You have already guessed this letter. Try again!";
+    } else {
+        guessedLetters.push(guess);
+        console.log(guessedLetters);
+    }
+   
+};
